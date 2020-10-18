@@ -305,9 +305,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 599279121949275882, guid: 62cacec070e8c554db6395f58040d6d9, type: 3}
-      propertyPath: _gridSize
-      value: 10
+    - target: {fileID: 1737265548, guid: 62cacec070e8c554db6395f58040d6d9, type: 3}
+      propertyPath: m_Text
+      value: 0,0
       objectReference: {fileID: 0}
     - target: {fileID: 1377205116694513283, guid: 62cacec070e8c554db6395f58040d6d9, type: 3}
       propertyPath: m_LocalPosition.x
