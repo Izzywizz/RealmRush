@@ -12,10 +12,10 @@ public class EnemyMovement : MonoBehaviour
     /// Start is called before the first frame update
     private void Start()
     {
-        if (_pathCoroutine == null)
-        {
-            _pathCoroutine = StartCoroutine(FollowPath());
-        }
+        //if (_pathCoroutine == null)
+        //{
+        //    _pathCoroutine = StartCoroutine(FollowPath());
+        //}
     }
 
 

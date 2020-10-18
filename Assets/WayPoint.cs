@@ -14,7 +14,7 @@ public class WayPoint : MonoBehaviour
     /// Calcualtes grid position based on static int 10 grid size
     /// </summary>
     /// <returns></returns>
-    public Vector2 GetGridPos()
+    public Vector2Int GetGridPos()
     {
         return new Vector2Int(
         Mathf.RoundToInt(transform.position.x / _gridSize) * _gridSize,
