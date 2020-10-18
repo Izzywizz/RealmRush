@@ -3,42 +3,60 @@
 
 [ExecuteInEditMode]
 [SelectionBase]
+[RequireComponent(typeof(WayPoint))]
 public class CubeEditor : MonoBehaviour
 {
 
-    [SerializeField]
-    [Range(1.0f, 20.0f)]
-    private float _gridSize = 10.0f;
+    private WayPoint _waypoint;
 
-    [SerializeField]
-    private TextMesh _textMesh = null;
+    private void Awake()
+    {
+        _waypoint = GetComponent<WayPoint>();
+    }
+
 
     /// <summary>
+    /// 
     /// 
     /// </summary>
     private void Update()
     {
-        SnapToGrid(_gridSize);
+        SnapToGrid();
+        UpdateLabel();
     }
 
 
     /// <summary>
     /// Snaps GameObjects to a gridsize, for example a 10 gridsize;  You move 6 units in x, divided this by 10
-    /// which is 0.6, rounded to the nearest int is 1 then multiply by 10 giving you 10 and setting its position.
+    /// which is 0.6, rounded to the nearest int is 1 then multiply by 10, giving you 10 and setting its position 10 in the desired x/ z.
     /// Then it Sets the Label text on the Top Quad and dividing by the grid size to get 0,1 etc
     /// </summary>
-    private void SnapToGrid(float gridSize)
+    private void SnapToGrid()
     {
-        Vector3 snapPos;
-        snapPos.x = Mathf.RoundToInt(transform.position.x / gridSize) * gridSize;
-        snapPos.z = Mathf.RoundToInt(transform.position.z / gridSize) * gridSize;
+        transform.position = new Vector3(
+            _waypoint.GetGridPos().x, // x
+            0f, 
+            _waypoint.GetGridPos().y  // z
+            );
+    }
 
-        transform.position = new Vector3(snapPos.x, 0f, snapPos.z);
 
-        if (_textMesh != null)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="gridSize"></param>
+    private void UpdateLabel()
+    {
+        int gridSize = _waypoint.GridSize;
+        TextMesh textMesh = GetComponentInChildren<TextMesh>();
+
+        if (textMesh != null && _waypoint != null)
         {
-            string labelText = string.Format("{0},{1}", snapPos.x / gridSize, snapPos.z / gridSize);
-            _textMesh.text = labelText;
+            string labelText = string.Format("{0},{1}", 
+                _waypoint.GetGridPos().x / gridSize, 
+                _waypoint.GetGridPos().y / gridSize);
+
+            textMesh.text = labelText;
 
             gameObject.name = string.Format("Cube {0}", labelText);
         }
