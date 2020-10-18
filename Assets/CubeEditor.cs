@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 [ExecuteInEditMode]
@@ -39,7 +37,10 @@ public class CubeEditor : MonoBehaviour
 
         if (_textMesh != null)
         {
-            _textMesh.text = string.Format("{0},{1}", snapPos.x / gridSize, snapPos.z / gridSize);
+            string labelText = string.Format("{0},{1}", snapPos.x / gridSize, snapPos.z / gridSize);
+            _textMesh.text = labelText;
+
+            gameObject.name = string.Format("Cube {0}", labelText);
         }
     }
 }
