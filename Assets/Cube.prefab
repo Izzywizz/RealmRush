@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 51ad03048b6653e449f418a18c30d545, type: 2}
+  - {fileID: 2100000, guid: a1ebd752201d392419b166a4d2b4d399, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -156,7 +156,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b60b86cc0595cd54e9d7b4eca7560686, type: 2}
+  - {fileID: 2100000, guid: 51ad03048b6653e449f418a18c30d545, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -252,7 +252,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 51ad03048b6653e449f418a18c30d545, type: 2}
+  - {fileID: 2100000, guid: a1ebd752201d392419b166a4d2b4d399, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -348,7 +348,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 51ad03048b6653e449f418a18c30d545, type: 2}
+  - {fileID: 2100000, guid: a1ebd752201d392419b166a4d2b4d399, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -540,7 +540,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 51ad03048b6653e449f418a18c30d545, type: 2}
+  - {fileID: 2100000, guid: b60b86cc0595cd54e9d7b4eca7560686, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -585,6 +585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1377205116694513283}
+  - component: {fileID: 599279121949275882}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -601,7 +602,7 @@ Transform:
   m_GameObject: {fileID: 2415795239338921274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 599279123038153677}
   - {fileID: 599279121705294660}
@@ -612,3 +613,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &599279121949275882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2415795239338921274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ef7f9a196b9a3488dd01733a7ff9f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gridSize: 10
